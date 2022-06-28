@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { ArrowFatLinesRight } from "phosphor-react";
+import "./styles/app.css";
 
 function App() {
 	const [amount, setAmount] = useState(1);
@@ -62,33 +64,39 @@ function App() {
 			/>
 
 			<div className="from-to">
-				<label htmlFor="from-currency">From :</label>
-				<select
-					id="from-currency"
-					onChange={event =>
-						handleChangeFromCurrency(event.target.value)
-					}
-				>
-					{Object.keys(rates).map(rate => (
-						<option key={rate} value={rate}>
-							{rate}
-						</option>
-					))}
-				</select>
+				<div className="from-group">
+					<label htmlFor="from-currency">From :</label>
+					<select
+						id="from-currency"
+						onChange={event =>
+							handleChangeFromCurrency(event.target.value)
+						}
+					>
+						{Object.keys(rates).map(rate => (
+							<option key={rate} value={rate}>
+								{rate}
+							</option>
+						))}
+					</select>
+				</div>
 
-				<label htmlFor="to-currency">To :</label>
-				<select
-					id="to-currency"
-					onChange={event =>
-						handleChangeToCurrency(event.target.value)
-					}
-				>
-					{Object.keys(rates).map(rate => (
-						<option key={rate} value={rate}>
-							{rate}
-						</option>
-					))}
-				</select>
+				<ArrowFatLinesRight size={32} color="white" className="arrow" />
+
+				<div className="to-group">
+					<label htmlFor="to-currency">To :</label>
+					<select
+						id="to-currency"
+						onChange={event =>
+							handleChangeToCurrency(event.target.value)
+						}
+					>
+						{Object.keys(rates).map(rate => (
+							<option key={rate} value={rate}>
+								{rate}
+							</option>
+						))}
+					</select>
+				</div>
 			</div>
 
 			{amount ? (

@@ -1,0 +1,70 @@
+.container {
+	background: hsla(240, 5%, 4%, 1);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+
+	border-radius: 2rem;
+
+	padding: 2.4rem;
+}
+
+.container h1 {
+	color: white;
+
+	font-weight: 500;
+	margin-bottom: 2rem;
+}
+
+.container label {
+	color: white;
+
+	font-size: 1.6rem;
+
+	display: block;
+
+	margin-block: 2rem 1.2rem;
+}
+
+.container input,
+.container select {
+	background: hsla(240, 5%, 7%, 1);
+	color: white;
+
+	border-radius: 0.4rem;
+	border: none;
+
+	padding: 1.2rem;
+	width: 100%;
+
+	outline: none;
+	font-size: 1.6rem;
+}
+
+.container input:focus,
+.container select:focus {
+	border: 1px solid hsl(162, 100%, 35%);
+}
+
+.container .from-to {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	width: 100%;
+}
+
+.container .from-to .arrow {
+	margin-top: 4rem;
+}
+
+.container span {
+	color: hsl(162, 100%, 35%);
+	text-align: center;
+	width: 100%;
+	margin-top: 4rem;
+	font-weight: 700;
+	font-size: 2rem;
+}
