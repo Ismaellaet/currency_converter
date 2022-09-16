@@ -2,11 +2,11 @@ import requests
 from currencies import Currencies
 
 
-def main():
-    host = 'https://www.frankfurter.app/'
+HOST = 'https://www.frankfurter.app/'
 
+def main():
     try:
-        available_currencies = requests.get(f'{host}/currencies').json()
+        available_currencies = requests.get(f'{HOST}/currencies').json()
     except:
         print('Server Error!')
         return
