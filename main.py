@@ -39,6 +39,7 @@ def set_action_grub():
             return action
         print('\nInvalid answer!')
 
+
 def conversion(amount, from_currency, to_currency):
     response = requests.get(f'{HOST}/latest?amount={amount}&from={from_currency}&to={to_currency}').json()
     rates = response['rates']

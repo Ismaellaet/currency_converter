@@ -7,6 +7,7 @@ class Currencies:
         for key, value in self.available_currencies.items():
             print(f'{value:24} -> {key:>4}')
 
+
     def get_user_input_currencies(self):
         while True:
             from_currency = input('\nFrom currency -> ').upper()
