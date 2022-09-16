@@ -16,13 +16,13 @@ def main():
         action = set_action_grub()
         if action == 's':
             currencies.show_currencies()
-            pause = input("\nPress the any key to continue...")
+            pause()
         elif action == 'c':
             from_currency, to_currency = currencies.get_user_input_currencies()
             amount = float(input('Amount -> '))
 
             conversion(amount=amount, from_currency=from_currency, to_currency=to_currency)
-            pause = input("\nPress the any key to continue...")
+            pause()
         elif action == 'q':
             break
 
@@ -44,6 +44,10 @@ def conversion(amount, from_currency, to_currency):
     rates = response['rates']
     result =  tuple(rates.values())[0]
     print(f'{amount} {from_currency} = {result} {to_currency}')
+
+
+def pause():
+    input("\nPress any key to continue...")
 
 if __name__ == '__main__':
     main()
