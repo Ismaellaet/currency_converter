@@ -17,7 +17,14 @@ def main():
         if action == 's':
             currencies.show_currencies()
             pause = input("\nPress the any key to continue...")
-        break
+        elif action == 'c':
+            from_currency, to_currency = currencies.get_user_input_currencies()
+            amount = float(input('Amount -> '))
+
+            conversion(amount=amount, from_currency=from_currency, to_currency=to_currency)
+            pause = input("\nPress the any key to continue...")
+        elif action == 'q':
+            break
 
 
 def set_action_grub():
